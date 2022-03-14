@@ -1,0 +1,23 @@
+3 bước cơ bản: 
+- Lấy dữ liệu nguồn
+- thực hiện xử lý trung gian
+- Loading (đưa dữ liệu từ dữ liệu nguồn vào kho dữ liệu)
+
+(1) Load Dim_SaleTerritory
+ - [Sales].[SalesTerritory]
+ - [Person].[CountryRegion]
+
+CREATE TABLE [dbo].[Dim_Sale_Territory](
+    [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    [Country] [nvarchar](50) NOT NULL, ([SalesTerriory].[Name])
+    [Group] [nvarchar](50) NOT NULL, ([SalesTerriory].[Group])
+    [Region] [nvarchar](50) NULL, ([CountryRegionCode].[Name])
+    [TerritoryId_Op] [int] NOT NULL
+)
+
+SELECT * FROM Sales.SalesTerritory sst
+join Person.CountryRegion pcr
+on sst.CountryRegionCode = pcr.CountryRegionCode
+
+(2)
+

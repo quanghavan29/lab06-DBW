@@ -1,0 +1,1655 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/12/2022 5:35:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-ODGG7CU"
+  DTS:CreatorName="DESKTOP-ODGG7CU\antoan"
+  DTS:DTSID="{957DF2B8-7272-4641-A2D2-7AA869B39170}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{CD5BDC7A-5350-4372-8E4C-3217F11C1AAF}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ODGG7CU]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{004F1A31-7DC4-4495-9BA4-682A324C1A50}"
+      DTS:ObjectName="DESKTOP-ODGG7CU">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ODGG7CU;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ODGG7CU 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{55269AD2-C726-45DA-B67D-07E0B44DBDB8}"
+      DTS:ObjectName="DESKTOP-ODGG7CU 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ODGG7CU;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ODGG7CU.CarRental_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{EB7450BB-B211-42E1-A269-4538D890DB26}"
+      DTS:ObjectName="DESKTOP-ODGG7CU.CarRental_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ODGG7CU;Initial Catalog=CarRental_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ODGG7CU.HE140233_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C4A488A0-48D0-4B0F-A6D2-E1052BAC327B}"
+      DTS:ObjectName="DESKTOP-ODGG7CU.HE140233_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ODGG7CU;Initial Catalog=HE140233_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ODGG7CU.HE140233_DW 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F8B1C1B7-F888-4D5E-BC9A-24A12CD48444}"
+      DTS:ObjectName="DESKTOP-ODGG7CU.HE140233_DW 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ODGG7CU;Initial Catalog=HE140233_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-ODGG7CU.OP_CarRental]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3B100676-7A20-4B57-9B69-FD3875B50E1D}"
+      DTS:ObjectName="DESKTOP-ODGG7CU.OP_CarRental">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-ODGG7CU;Initial Catalog=OP_CarRental;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Load Dim_Customers"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2DAA47A1-A82C-4620-983C-F3DC790D9C84}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Load Dim_Customers"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column CustomerType"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Inputs[Derived Column Input].Columns[type]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="type"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[type]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Output].Columns[CustomerType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="12"
+                      lineageId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Output].Columns[CustomerType]"
+                      name="CustomerType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[type]} == "Organization" ? "Organization" : "Individual"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">type == "Organization" ? "Organization" : "Individual"</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Left Input].Columns[DistrictID]"
+                      cachedDataType="i4"
+                      cachedName="DistrictID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output].Columns[DistrictID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Left Input].Columns[type]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="type"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output].Columns[type]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input].Columns[District]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="District"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[District]" />
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="city"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="country"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[country]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[type]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[type]"
+                      name="type">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Left Input].Columns[type]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[District]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[District]"
+                      name="District">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input].Columns[District]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[city]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[city]"
+                      name="city">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[country]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[country]"
+                      name="country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Customer_Op"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Customers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ODGG7CU.OP_CarRental]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ODGG7CU.OP_CarRental]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[type]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].ExternalColumns[type]"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[type]"
+                      name="type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[DistrictID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].ExternalColumns[DistrictID]"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[DistrictID]"
+                      name="DistrictID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].ExternalColumns[type]"
+                      dataType="wstr"
+                      length="100"
+                      name="type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="10"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].ExternalColumns[StreetAddress]"
+                      dataType="wstr"
+                      length="100"
+                      name="StreetAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].ExternalColumns[DistrictID]"
+                      dataType="i4"
+                      name="DistrictID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[type]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[type]"
+                      name="type" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[DistrictID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[DistrictID]"
+                      name="DistrictID" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination Dim_Customer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Dim_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ODGG7CU.HE140233_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ODGG7CU.HE140233_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].Columns[CustomerType]"
+                      cachedDataType="wstr"
+                      cachedLength="12"
+                      cachedName="CustomerType"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[title]"
+                      lineageId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Output].Columns[CustomerType]" />
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="city"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[firstName]"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[city]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[id]"
+                      dataType="i4"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="50"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[firstName]"
+                      dataType="wstr"
+                      length="255"
+                      name="firstName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[middleInitial]"
+                      dataType="wstr"
+                      length="255"
+                      name="middleInitial" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[lastName]"
+                      dataType="wstr"
+                      length="255"
+                      name="lastName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
+                      dataType="wstr"
+                      length="50"
+                      name="gender" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[dob]"
+                      dataType="dbDate"
+                      name="dob" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[maritalStatus]"
+                      dataType="wstr"
+                      length="50"
+                      name="maritalStatus" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[phone]"
+                      dataType="wstr"
+                      length="50"
+                      name="phone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[yearlyIncome]"
+                      dataType="wstr"
+                      length="50"
+                      name="yearlyIncome" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[totalChildren]"
+                      dataType="i4"
+                      name="totalChildren" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[numberChildrenAtHome]"
+                      dataType="i4"
+                      name="numberChildrenAtHome" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[education]"
+                      dataType="wstr"
+                      length="255"
+                      name="education" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[occupation]"
+                      dataType="wstr"
+                      length="255"
+                      name="occupation" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[houseOwnerFlag]"
+                      dataType="bool"
+                      name="houseOwnerFlag" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[numberCarOwner]"
+                      dataType="i4"
+                      name="numberCarOwner" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[addressLine1]"
+                      dataType="wstr"
+                      length="255"
+                      name="addressLine1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[addressLine2]"
+                      dataType="wstr"
+                      length="255"
+                      name="addressLine2" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[state]"
+                      dataType="wstr"
+                      length="255"
+                      name="state" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[zipCode]"
+                      dataType="wstr"
+                      length="255"
+                      name="zipCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input].ExternalColumns[customerId_Op]"
+                      dataType="i4"
+                      name="customerId_Op" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Districts_Op"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Districts]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-ODGG7CU.OP_CarRental]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-ODGG7CU.OP_CarRental]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[District]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[District]"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[District]"
+                      name="District"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[country]"
+                      name="country"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[District]"
+                      dataType="wstr"
+                      length="100"
+                      name="District" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="100"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].ExternalColumns[country]"
+                      dataType="wstr"
+                      length="100"
+                      name="country" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[District]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[District]"
+                      name="District" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[city]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[country]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[country]"
+                      name="country" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort DistrictID ASC"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Inputs[Sort Input].Columns[type]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="type"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[type]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Inputs[Sort Input].Columns[DistrictID]"
+                      cachedDataType="i4"
+                      cachedName="DistrictID"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[DistrictID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output].Columns[type]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output].Columns[type]"
+                      name="type">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[type]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output].Columns[DistrictID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output].Columns[DistrictID]"
+                      name="DistrictID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output].Columns[DistrictID]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\Sort ID ASC"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort ID ASC"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Inputs[Sort Input].Columns[Id]"
+                      cachedDataType="i4"
+                      cachedName="Id"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[Id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Inputs[Sort Input].Columns[District]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="District"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[District]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Inputs[Sort Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="city"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Inputs[Sort Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="country"
+                      lineageId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[Id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[Id]"
+                      name="Id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[Id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[District]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[District]"
+                      name="District">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[District]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[city]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[city]"
+                      name="city">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[country]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output].Columns[country]"
+                      name="country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort to remove duplicate row"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Inputs[Sort Input].Columns[type]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="type"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[type]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Inputs[Sort Input].Columns[District]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="District"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[District]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Inputs[Sort Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="city"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[city]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Inputs[Sort Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="country"
+                      lineageId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[type]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[type]"
+                      name="type"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[type]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[District]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[District]"
+                      name="District"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[District]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[city]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[city]"
+                      name="city"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[city]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[country]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output].Columns[country]"
+                      name="country"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output].Columns[country]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Load Dim_Customers.Paths[Derived Column Output]"
+              endId="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Load Dim_Customers.Paths[Merge Join Output]"
+              endId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Inputs[Sort Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Load Dim_Customers\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Load Dim_Customers.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Load Dim_Customers.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Load Dim_Customers.Paths[Sort Output]"
+              endId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Load Dim_Customers.Paths[Sort Output1]"
+              endId="Package\Data Flow Load Dim_Customers\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Load Dim_Customers\Sort ID ASC.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Load Dim_Customers.Paths[Sort Output2]"
+              endId="Package\Data Flow Load Dim_Customers\Derived Column CustomerType.Inputs[Derived Column Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\Data Flow Load Dim_Customers"
+          TopLeft="142.424236764812,140.242425356971" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Load Dim_Customers">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op"
+          TopLeft="211.666658255789,25.1333335330751" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op"
+          TopLeft="549.166644844745,59.8000004752477" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow Load Dim_Customers\Merge Join"
+          TopLeft="412.499983608723,208.000001653035" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Data Flow Load Dim_Customers\Sort DistrictID ASC"
+          TopLeft="199.999992052714,123.066667644713" />
+        <EdgeLayout
+          Id="Package\Data Flow Load Dim_Customers.Paths[OLE DB Source Output]"
+          TopLeft="303.666658255789,66.7333335330751">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-20.466666203075,56.3333341116376"
+              Start="0,0"
+              End="-20.466666203075,48.8333341116376">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.1666670558188" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.1666670558188"
+                    Point2="0,28.1666670558188"
+                    Point3="-4,28.1666670558188" />
+                  <mssgle:LineSegment
+                    End="-16.466666203075,28.1666670558188" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.466666203075,28.1666670558188"
+                    Point2="-20.466666203075,28.1666670558188"
+                    Point3="-20.466666203075,32.1666670558188" />
+                  <mssgle:LineSegment
+                    End="-20.466666203075,48.8333341116376" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Data Flow Load Dim_Customers\Sort ID ASC"
+          TopLeft="624.999975164732,132.60000105381" />
+        <EdgeLayout
+          Id="Package\Data Flow Load Dim_Customers.Paths[OLE DB Source Output1]"
+          TopLeft="637.166644844745,101.400000475248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="55.0333303199877,31.2000005785625"
+              Start="0,0"
+              End="55.0333303199877,23.7000005785625">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.6000002892812" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.6000002892812"
+                    Point2="0,15.6000002892812"
+                    Point3="4,15.6000002892812" />
+                  <mssgle:LineSegment
+                    End="51.0333303199877,15.6000002892812" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.0333303199877,15.6000002892812"
+                    Point2="55.0333303199877,15.6000002892812"
+                    Point3="55.0333303199877,19.6000002892812" />
+                  <mssgle:LineSegment
+                    End="55.0333303199877,23.7000005785625" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Load Dim_Customers.Paths[Sort Output]"
+          TopLeft="283.199992052714,164.666667644713">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="173.833324889342,43.3333340083228"
+              Start="0,0"
+              End="173.833324889342,35.8333340083228">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.682927229323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.682927229323"
+                    Point2="0,25.682927229323"
+                    Point3="4,25.682927229323" />
+                  <mssgle:LineSegment
+                    End="169.833324889342,25.682927229323" />
+                  <mssgle:CubicBezierSegment
+                    Point1="169.833324889342,25.682927229323"
+                    Point2="173.833324889342,25.682927229323"
+                    Point3="173.833324889342,29.682927229323" />
+                  <mssgle:LineSegment
+                    End="173.833324889342,35.8333340083228" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Load Dim_Customers.Paths[Sort Output1]"
+          TopLeft="692.199975164732,174.20000105381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-194.633324889343,33.8000005992253"
+              Start="0,0"
+              End="-194.633324889343,26.3000005992253">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.0326832819799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.0326832819799"
+                    Point2="0,20.0326832819799"
+                    Point3="-4,20.0326832819799" />
+                  <mssgle:LineSegment
+                    End="-190.633324889343,20.0326832819799" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-190.633324889343,20.0326832819799"
+                    Point2="-194.633324889343,20.0326832819799"
+                    Point3="-194.633324889343,24.0326832819799" />
+                  <mssgle:LineSegment
+                    End="-194.633324889343,26.3000005992253" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Data Flow Load Dim_Customers\Sort to remove duplicate row"
+          TopLeft="379.999984900157,278.200002210935" />
+        <EdgeLayout
+          Id="Package\Data Flow Load Dim_Customers.Paths[Merge Join Output]"
+          TopLeft="481.24998425444,249.600001653035">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.6000005578993"
+              Start="0,0"
+              End="0,21.1000005578993">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1000005578993" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="224,41.6"
+          Id="Package\Data Flow Load Dim_Customers\Derived Column CustomerType"
+          TopLeft="385.833318001695,383.066669711007" />
+        <EdgeLayout
+          Id="Package\Data Flow Load Dim_Customers.Paths[Sort Output2]"
+          TopLeft="485.199984900157,319.800002210935">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.6333331015374,63.2666675000723"
+              Start="0,0"
+              End="12.6333331015374,55.7666675000723">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.6333337500361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.6333337500361"
+                    Point2="0,31.6333337500361"
+                    Point3="4,31.6333337500361" />
+                  <mssgle:LineSegment
+                    End="8.6333331015374,31.6333337500361" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.6333331015374,31.6333337500361"
+                    Point2="12.6333331015374,31.6333337500361"
+                    Point3="12.6333331015374,35.6333337500361" />
+                  <mssgle:LineSegment
+                    End="12.6333331015374,55.7666675000723" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="243.2,41.6"
+          Id="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer"
+          TopLeft="770.83330270317,380.466669690344" />
+        <EdgeLayout
+          Id="Package\Data Flow Load Dim_Customers.Paths[Derived Column Output]"
+          TopLeft="609.833318001695,402.566669700676">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160.999984701475,0"
+              Start="0,0"
+              End="153.499984701475,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="153.499984701475,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Load Dim_Customers\OLE DB Customer_Op">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Load Dim_Customers\OLE DB Districts_Op">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Load Dim_Customers\OLE DB Destination Dim_Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
