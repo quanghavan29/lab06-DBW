@@ -8,11 +8,11 @@
  - [Person].[CountryRegion]
 
 CREATE TABLE [dbo].[Dim_Sale_Territory](
-    [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    [Country] [nvarchar](50) NOT NULL, ([SalesTerriory].[Name])
-    [Group] [nvarchar](50) NOT NULL, ([SalesTerriory].[Group])
-    [Region] [nvarchar](50) NULL, ([CountryRegionCode].[Name])
-    [TerritoryId_Op] [int] NOT NULL
+          [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+          [Country] [nvarchar](50) NULL,
+          [Group] [nvarchar](50) NULL,
+          [Region] [nvarchar](50) NULL,
+          [TerritoryId_Op] [int] NULL
 )
 
 SELECT * FROM Sales.SalesTerritory sst
@@ -23,30 +23,50 @@ on sst.CountryRegionCode = pcr.CountryRegionCode
  - [Sale].[SpecialOffer]
 
 CREATE TABLE [dbo].[Dim_Promotion](
-    [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    [SpecialOfferId_Op] [int] NOT NULL,
-    [Type] [nvarchar](50) NOT NULL,
-    [StartDate] [datetime] NOT NULL,
-    [EndDate] [datetime] NOT NULL,
-    [MinQty] [int] NOT NULL,
-    [MaxQty] [int] NULL,
-    [DiscountPct] [smallmoney] NOT NULL,
+          [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+          [SpecialOfferId_Op] [int] NULL,
+          [Type] [nvarchar](50) NULL,
+          [StartDate] [datetime] NULL,
+          [EndDate] [datetime] NULL,
+          [MinQty] [int] NULL,
+          [MaxQty] [int] NULL,
+          [DiscountPct] [smallmoney] NULL,
 )
 
 (3) Load Dim_Currency - Cần xem lại
  - [Sales].[Currency]
 
 CREATE TABLE [dbo].[Dim_Currency](
-    [Code] [nchar](3) PRIMARY KEY NOT NULL,
-    [Name] [nvarchar](50) NOT NULL,
+          [Code] [nchar](3) PRIMARY KEY NOT NULL,
+          [Name] [nvarchar](50) NULL,
 )
 
 (4) Load Dim_Time - Cần xem lại
  - [Sales].[SalesOrderHeader]
 
 CREATE TABLE [dbo].[Dim_Time](
-    [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
-    [day] [int] NOT NULL,
-    [month] [int] NOT NULL,
-    [year] [int] NOT NULL,
+          [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+          [day] [int] NULL,
+          [month] [int] NULL,
+          [year] [int] NULL,
+)
+
+(5) Load Dim_Product
+ - [Production].[Product]
+
+CREATE TABLE [dbo].[Dim_Product](
+          [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+          [Color] [nvarchar](15) NULL,
+          [StandardCost] [money] NULL,
+          [ListPrice] [money] NULL,
+          [Size] [nvarchar](5) NULL,
+          [SizeUnitMeasureCode] [nvarchar](50) NULL,
+          [Weight] [decimal](8,2) NULL,
+          [WeightUnitMeasureCode] [nvarchar](50) NULL,
+          [ProductLine] [nchar](2) NULL,
+          [Class] [nchar](2) NULL,
+          [Style] [nchar](2) NULL,
+          [Category] [nvarchar](50) NULL,
+          [SubCategory] [nvarchar](50) NULL,
+          [Model] [nvarchar](50) NULL,
 )
