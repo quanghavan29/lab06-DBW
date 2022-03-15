@@ -19,5 +19,34 @@ SELECT * FROM Sales.SalesTerritory sst
 join Person.CountryRegion pcr
 on sst.CountryRegionCode = pcr.CountryRegionCode
 
-(2)
+(2) Load Dim_Promotion
+ - [Sale].[SpecialOffer]
 
+CREATE TABLE [dbo].[Dim_Promotion](
+    [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    [SpecialOfferId_Op] [int] NOT NULL,
+    [Type] [nvarchar](50) NOT NULL,
+    [StartDate] [datetime] NOT NULL,
+    [EndDate] [datetime] NOT NULL,
+    [MinQty] [int] NOT NULL,
+    [MaxQty] [int] NULL,
+    [DiscountPct] [smallmoney] NOT NULL,
+)
+
+(3) Load Dim_Currency - Cần xem lại
+ - [Sales].[Currency]
+
+CREATE TABLE [dbo].[Dim_Currency](
+    [Code] [nchar](3) PRIMARY KEY NOT NULL,
+    [Name] [nvarchar](50) NOT NULL,
+)
+
+(4) Load Dim_Time - Cần xem lại
+ - [Sales].[SalesOrderHeader]
+
+CREATE TABLE [dbo].[Dim_Time](
+    [id] [int] IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    [day] [int] NOT NULL,
+    [month] [int] NOT NULL,
+    [year] [int] NOT NULL,
+)
